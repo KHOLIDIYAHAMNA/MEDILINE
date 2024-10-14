@@ -1,0 +1,227 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+.absolute img{
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+  .container {
+    display: flex;
+    height: 100vh;
+  }
+  .sidebar {
+    width: 250px;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .logo img {
+    width: 30%;
+    height: auto;
+  }
+  .menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .menu li {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+  }
+  .sidebar .menu li:hover {
+    background-color: #B089C2;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .menu li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+  .menu li{
+  display: flex;
+  }
+  .menu img {
+  margin-right: 8px;
+  width: 15%;
+  } 
+  .menu li.active a {
+    display: flex;
+  }
+  .active{
+    display: flex;
+  }
+  .active img{
+    margin-right: 10px;
+    width : 13%;
+  }
+  .footer {
+    font-size: 12px;
+    color: #aaa;
+  }
+  .main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .header {
+    background-color: #6a0dad;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .status {
+    display: flex;
+    align-items: center;
+    color:  #FFB5B5;
+  }
+  .status img {
+    width: 20%;
+    margin-right: 10px;
+  }
+  .user-info {
+    display: flex;
+    align-items: center;
+  }
+  .user-info img {
+    width: 20%;
+    margin-left: 10px;
+  }
+  .content {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #ffffff;
+  }
+  .webcam-status img {
+    width: 300px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  .webcam-status p{
+    color: black;
+    font-size: 20px;
+  }
+  .status-text {
+    color: red;
+    font-size: 20px;
+  }
+
+/* Register Button */
+.register-button {
+  padding: 10px 20px;
+  background-color: #9C88FF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+/* Validation Indicator */
+.validation-indicator {
+  margin-bottom: 20px;
+}
+
+.valid {
+  color: green;
+  font-weight: bold;
+}
+
+.invalid {
+  color: red;
+  font-weight: bold;
+}
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-left: 10px;
+}
+.search-bar input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  margin-left: 10px;
+}
+
+th, td {
+  border: 1px solid #f4f4f4 ;
+  padding: 8px;
+  text-align: left;
+  color: #000000;
+}
+
+th {
+  background-color: #8644A2;
+  color: #ffffff;
+}
+.patient-message {
+  font-size: 1.2em;
+  color: #555;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  justify-items: center;
+  align-items: center;
+}
+/* Selected Patient */
